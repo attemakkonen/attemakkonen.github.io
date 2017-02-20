@@ -30,11 +30,26 @@
     font-family: Rajdhani;
 }
 
-.active {
+.navigation ul li a.active {
    color: #66b3ff;
 }
 
+.background-image {
+    width: 100%;
+    margin: auto;
+    max-width: 3000px;
+    height: auto;
+    text-align: center;
+   
+}
 
+.body {
+  background: url(assets/voimalat.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .h1 {
     position: fixed;
@@ -47,7 +62,8 @@
 
 .blog-post {
     width: 70%;
-    margin: auto;
+    max-width: 600px;
+    margin: 0 auto;
     text-align: center;
     font-family: Rajdhani;
     color: #333333;
@@ -67,28 +83,27 @@
     text-align: justify;
 }
 
-.image {
-    width: 70%;
-    margin: auto;
+.blog-post img {
+    position: left;
+}
+.resize {
+    width: 100%;
     max-width: 3000px;
     height: auto;
-    text-align: center;
-    font-family: Rajdhani;
-    color: #333333;
-    padding: 30px;
 }
-
     
 .footer {
     width: 100%;
-    height: 80px;
-    margin-top: 20px;
-    padding-top: 30px;
+    height: 40px;
+    margin-top: 10px;
+    padding-top: 0px;
     box-sizing: border-box;
     text-align: center;
     background-color: #fafafa;
     color: #333333;
     font-family: Rajdhani;
+    position:absolute;
+    bottom:0px;
     }
 
 
