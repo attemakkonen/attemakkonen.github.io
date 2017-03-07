@@ -1,0 +1,27 @@
+{ "articles": [
+    {
+        "id": 0,
+        "article": {
+            "title": "Uutinen",
+            "date":"20/2/017",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent neque lorem, porta quis dui non, fringilla fringilla dolor. Nulla condimentum vestibulum nunc, sed vehicula purus placerat ut. Etiam sed facilisis neque. Ut commodo, lectus accumsan dictum scelerisque, justo justo dapibus tellus, eleifend interdum tortor augue quis dui. Etiam iaculis, odio nec molestie malesuada, tortor orci viverra lectus, vitae maximus neque velit ac diam. Fusce viverra quis turpis at pretium. Integer tempor aliquet lacinia. Integer interdum luctus enim, rhoncus imperdiet quam dapibus in. Fusce tristique eros quis pellentesque tincidunt. Nam feugiat turpis ac euismod vestibulum. Nulla feugiat bibendum sagittis. Duis imperdiet lectus et urna rhoncus, nec tempus purus sollicitudin. Vestibulum convallis fermentum mi, non dignissim metus egestas id. Integer scelerisque magna at mauris volutpat cursus id vel lacus. Mauris pretium nisl tortor, eu sodales ipsum euismod id."
+        }
+    },
+    {
+        "id": 1,
+        "article": {
+            "title": "Kampanja",
+            "date":"21/2/2017",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent neque lorem, porta quis dui non, fringilla fringilla dolor. Nulla condimentum vestibulum nunc, sed vehicula purus placerat ut. Etiam sed facilisis neque. Ut commodo, lectus accumsan dictum scelerisque, justo justo dapibus tellus, eleifend interdum tortor augue quis dui. Etiam iaculis, odio nec molestie malesuada, tortor orci viverra lectus, vitae maximus neque velit ac diam. Fusce viverra quis turpis at pretium. Integer tempor aliquet lacinia. Integer interdum luctus enim, rhoncus imperdiet quam dapibus in. Fusce tristique eros quis pellentesque tincidunt. Nam feugiat turpis ac euismod vestibulum. Nulla feugiat bibendum sagittis. Duis imperdiet lectus et urna rhoncus, nec tempus purus sollicitudin. Vestibulum convallis fermentum mi, non dignissim metus egestas id. Integer scelerisque magna at mauris volutpat cursus id vel lacus. Mauris pretium nisl tortor, eu sodales ipsum euismod id."
+        }
+    },
+    {
+        "id": 2,
+        "article": {
+            "title": "Alku onnistunut",
+            "date":"22/2/2017",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent neque lorem, porta quis dui non, fringilla fringilla dolor. Nulla condimentum vestibulum nunc, sed vehicula purus placerat ut. Etiam sed facilisis neque. Ut commodo, lectus accumsan dictum scelerisque, justo justo dapibus tellus, eleifend interdum tortor augue quis dui. Etiam iaculis, odio nec molestie malesuada, tortor orci viverra lectus, vitae maximus neque velit ac diam. Fusce viverra quis turpis at pretium. Integer tempor aliquet lacinia. Integer interdum luctus enim, rhoncus imperdiet quam dapibus in. Fusce tristique eros quis pellentesque tincidunt. Nam feugiat turpis ac euismod vestibulum. Nulla feugiat bibendum sagittis. Duis imperdiet lectus et urna rhoncus, nec tempus purus sollicitudin. Vestibulum convallis fermentum mi, non dignissim metus egestas id. Integer scelerisque magna at mauris volutpat cursus id vel lacus. Mauris pretium nisl tortor, eu sodales ipsum euismod id."
+        }
+    }
+]
+}
