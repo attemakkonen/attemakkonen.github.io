@@ -51,7 +51,7 @@
   background-size: cover;
 }
 
-.h1 {
+h1 {
     position: fixed;
     text-align: center;
     font-family: Rajdhani;
@@ -121,7 +121,25 @@
     overflow:hidden;
     }
 
+#joku {
+    margin-top: 50px;
+}
 
+.uutisikkuna{
+    padding: 10px 20px;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    background: #fafafa;
+    height: 300px;
+    
+}
+  
+.painikkeet {
+  padding-top: 30px;
+  padding-left: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
 
 .videoWrapper {
     position: relative;
