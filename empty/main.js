@@ -53,7 +53,7 @@ var mainState = {
     //keeping count of the score and displaying it
         this.score = 0;
         this.labelScore = game.add.text(20, 20, "0",
-            { font: "30px Arial", fill: "#ffffff" });
+            { font: "30px Avenir", fill: "#000000" });
         //sound effects for the bat
         this.jumpSound = game.add.audio('jump');
        
