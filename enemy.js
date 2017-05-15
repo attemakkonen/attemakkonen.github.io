@@ -1,42 +1,54 @@
-var enemies = [];
+var enemiesArray = [];
 
-function addEnemy() {
-var enemy = {
+
+var enemyKuva = new Image();
+enemyKuva.src = "assets/raindrops.jpg";
+
+function getRandomInteger( min, max ){
+    var different = max - min;
+    
+    var number = parseInt(Math.round(Math.random() * different + min));
+    return number;
+}
+
+
+function createEnemies() {
+    
+     for (i = 0; i < 4; i++) {
+            var enemy = {
         x: Math.floor((Math.random() * 370) + 30),
         y: Math.floor((Math.random() * 370) + 30),
         w: 40,
         h: 40,
         speed: 10, 
-        direction: 1
+        direction: getRandomInteger(0, 4)
     };
     
-    return enemy;
+    enemies.push(enemy);
+     }
 };
 
-for(i=0; i < 4; i++) {
-    enemies.push(addEnemy());
-};
+
  
-function move() {
-   for(i=0; i < enemies.length; i++) {
-       var monster = enemies[i];
-       
-       if(monster.direction == 1) {
-       monster.x = monster.x + monster.speed
-       }
-       if(monster.x >= 350) {
-           monster.direction = 2
-           
-       }
-       if(monster.direction == 2) {
-           monster.x = monster.x - monster.speed
-       }
-       if(monster.x <= 50) {
-           monster.direction = 1
-           
-       }
+function moveEnemies() {
+   
        
 }
+
+function drawEnemies(context) {
+$.each(enemiesArray, function(index, ass) {
+var x = player.x - (player.w / 2);
+var y = player.y - (player.h / 2);
+        context.drawImage(
+        playerKuva,
+        x,
+        y,
+        player.w,
+        player.h);
+    });
 }
+       
+
+
 
 
