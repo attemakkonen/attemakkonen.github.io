@@ -1,49 +1,51 @@
+//Asettaa pelaajan alkusijainnin.
 var player = {
        x: 200,
        y: 200,
        w: 40,
        h: 40,
        speed: 10
-    };
-    
+};
+   
 
+//Pelaajan kuvan valinta.
+var playerKuva = new Image();
+playerKuva.src = "assets/pilvi.png";
+
+
+//Vaihtaa pelaajan nopeutta, kun painiketta painaa.
 function changeSpeed(s) {
-player.speed += s;
+    player.speed += s;
 };
 
+
+//Resetoi pelin, kun 
 function reset() {
-    player.x = width / 2;
-    player.y = height / 2;
+    player.x = 200;
+    player.y = 200;
     player.speed = 5;
+    createEnemies();
+    enemiesArray.splice(0, 4);
 }
 
-
-
-
-    var playerKuva = new Image();
-    playerKuva.src = "assets/pilvi.png";
+    
+//Piirtää pelaajan canvasille.
+function drawPlayer(context) {
+    var x = player.x - (player.w / 2);
+    var y = player.y - (player.h / 2);
+    context.drawImage(
+    playerKuva,
+    x,
+    y,
+    player.w,
+     player.h);
+};
+    
+var keysDown = {};
     
     
-    
-    
-    
-     function drawPlayer(context) {
-        var x = player.x - (player.w / 2);
-        var y = player.y - (player.h / 2);
-        context.drawImage(
-        playerKuva,
-        x,
-        y,
-        player.w,
-        player.h);
-    };
-    
-    var keysDown = {};
-    
-   
-    
-    
-    function movePlayer(direction) {
+//Liikuttaa pelaajaa eri suuntiin riippuen nuolinäppäinten painalluksista.
+function movePlayer(direction) {
         switch (direction) {
             case "left":
                 player.x -= player.speed;
@@ -70,19 +72,23 @@ function reset() {
                 }
                 break;
         }
-    };
+};
+
+
+//Liittyy pelaajan liikuttamiseen.
+window.addEventListener('keydown', function(e) {
+    keysDown[e.keyCode] = true;
+});
     
-     window.addEventListener('keydown', function(e) {
-        keysDown[e.keyCode] = true;
-    });
+
+//Liittyy pelaajan liikuttamiseen.
+window.addEventListener('keyup', function(e) {
+    delete keysDown[e.keyCode];
+});
     
-    
-    window.addEventListener('keyup', function(e) {
-        delete keysDown[e.keyCode];
-    });
-    
-    
-    function update() {
+
+//Liikuttaa pelaajaa haluttuihin suuntiin riippuen mitä nappia painetaan.
+ function update() {
         if (38 in keysDown) {
             movePlayer('up');
         }
@@ -98,8 +104,36 @@ function reset() {
         if (39 in keysDown) {
             movePlayer('right');
         }
-        move()
-    };
+        
+};
     
 
+//Aiheuttaa vihollisen suunnanvaihdoksen, kun se törmää pelaajaan.
+ function collision() {
+        for (var i in enemiesArray) {
+            if (
+		        player.x <= (enemiesArray[i].x + 40)
+		        && enemiesArray[i].x <= (player.x + 40)
+		        && player.y <= (enemiesArray[i].y + 40)
+		        && enemiesArray[i].y <= (player.y + 40)
+	           ) {
+                    if (enemiesArray[i].direction == 0) {
+                        enemiesArray[i].direction = 1;
+                        break;
+                    }
+                    if (enemiesArray[i].direction == 1) {
+                        enemiesArray[i].direction = 0;
+                        break;
+                    }
+                    if (enemiesArray[i].direction == 2) {
+                        enemiesArray[i].direction = 3;
+                        break;
+	                }
+                    if (enemiesArray[i].direction == 3) {
+                        enemiesArray[i].direction = 2;
+                        break;
+                    }
+            }
+        }
+};
     
