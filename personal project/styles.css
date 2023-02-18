@@ -1,0 +1,104 @@
+body {
+    background-color: #F6F6F6;;
+  }
+
+.containerButton {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: auto;
+  
+    box-sizing: border-box;
+    width: 400px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  
+    background: #F6F6F6;
+    /* border: 2px dashed rgba(114, 186, 94, 0.35); */
+  }
+
+#buttonT {
+    background-color: #808080;
+    color: #F6F6F6;
+}
+
+.button {
+    background-color: #F6F6F6; 
+    border: 0.5px solid #AAAAAA;
+    color: #171717;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 4px 2px;
+    border-radius: 45px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+ 
+
+  /* .button:hover {
+    background-color: #656565;
+    color: white;
+  } */
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: auto;
+  
+    box-sizing: border-box;
+    width: 400px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  
+    background: #F6F6F6;
+    /* border: 2px dashed rgba(114, 186, 94, 0.35); */
+  }
+  
+  .item {
+    box-sizing: border-box;
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    /* background: rgba(226, 225, 232, 0.4); */
+    /* border: 2px dashed rgba(236, 198, 48, 0.5); */
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    
+
+  }
+
+  .item img {
+    width: 75px;
+    border-radius: 5px;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+ }
+
+.item:hover img {
+	opacity: .5;
+    background-color: #AAAAAA;
+}
+
+.item p {
+    margin-top: 3px;
+}
+

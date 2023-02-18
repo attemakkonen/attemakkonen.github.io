@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+    <div class="containerButton">
+        <div class="item">
+            <button class="button" id="buttonT" onclick="changePath('test')">test</button>
+        </div>
+        <div class="item">  
+            <button class="button" id="buttonA" onclick="changePath('app')">app</button>
+        </div>
+        
+    </div>
+
+   
+
+    <div class="container">
+        <div class="item">
+            <a id="atteLink" onclick="changeUsername('atte')"><img src="profile_pics/atte.jpg" /></a></a>
+            <p>Atte</p>
+        </div>
+        <div class="item">
+            <a id="ellaLink" onclick="changeUsername('ellaemiliia')"><img src="profile_pics/ella.jpg"/></a>
+            <p>Ella</p>
+        </div>
+        <div class="item">
+            <a id="inaLink" onclick="changeUsername('inamikkola')"><img src="profile_pics/ina.jpg"/></a>
+            <p>Ina</p>
+        </div>
+        <div class="item">
+            <a id="jalmariLink" onclick="changeUsername('jalmafi')"><img src="profile_pics/jalmari.jpg"/></a>
+            <p>Jalmari</p>
+        </div>
+        <div class="item">
+            <a id="janiLink" onclick="changeUsername('janitoivo')"><img src="profile_pics/jani.jpeg"/></a>
+            <p>Jani</p>
+        </div>
+        <div class="item">
+            <a id="jamboLink" onclick="changeUsername('munsometili')"><img src="profile_pics/jambo.jpeg"/></a>
+            <p>Jambo</p>
+        </div>
+        <div class="item">
+            <a id="jereLink" onclick="changeUsername('jereviinikainen')"><img src="profile_pics/jere.jpg"/></a>
+            <p>Jere</p>
+        </div>
+        <div class="item">
+            <a id="johannesLink" onclick="changeUsername('johannesyrjo')"><img src="profile_pics/johannes.jpg"/></a>
+            <p>Johannes</p>
+        </div>
+        <div class="item">
+            <a id="joonaLink" onclick="changeUsername('joonahellman')"><img src="profile_pics/joona.jpg"/></a>
+            <p>Joona</p>
+        </div>
+        <div class="item">
+            <a id="keinaanLink" onclick="changeUsername('keinaans')"><img src="profile_pics/keinaan.jpg"/></a>
+            <p>Keinaan</p>
+        </div>
+        <div class="item">
+            <a id="riikkaLink" onclick="changeUsername('riikkalbum')"><img src="profile_pics/riikka.jpg"/></a>
+            <p>Riikka</p>
+        </div>
+        <div class="item">
+            <a id="ronjaLink" onclick="changeUsername('ronjarontti')"><img src="profile_pics/ronja.jpg"/></a>
+            <p>Ronja</p>
+        </div>
+        <div class="item">
+            <a id="roosaLink" onclick="changeUsername('roosarahkonen')"><img src="profile_pics/roosa.jpg"/></a>
+            <p>Roosa</p>
+        </div>
+        <div class="item">
+            <a id="saraLink" onclick="changeUsername('saratickle')"><img src="profile_pics/sara.jpg"/></a>
+            <p>Sara</p>
+        </div>
+        <div class="item">
+            <a id="tildaLink" onclick="changeUsername('jaljillapodcast')"><img src="profile_pics/tilda.jpeg"/></a>
+            <p>Tilda</p>
+        </div>
+        <div class="item">
+            <a id="veeraLink" onclick="changeUsername('veerabogdanoff')"><img src="profile_pics/veera.jpg"/></a>
+            <p>Veera</p>
+        </div>
+        
+      </div>
+
+
+      <script>
+        var path = "test";
+        var username = ""
+
+        function changeUsername(x) {
+            username = x
+            document.getElementById("atteLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("johannesLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("saraLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("jamboLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("janiLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("inaLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("riikkaLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("ellaLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("tildaLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("jereLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("joonaLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("keinaanLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("ronjaLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("roosaLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("veeraLink").href = "https://" + path + ".somefrogs.co/" + username;
+            document.getElementById("jalmariLink").href = "https://" + path + ".somefrogs.co/" + username;
+            // document.getElementById("atteLink2").href = "https://" + path + ".somefrogs.co/" + username;
+
+        }
+
+        function changePath(x) {
+            path = x;
+        }
+
+
+        const btnT = document.getElementById('buttonT');
+        const btnA = document.getElementById('buttonA');
+
+        btnT.addEventListener('click', function onClick() {
+            btnT.style.backgroundColor = '#808080';
+            btnT.style.color = 'white';
+            btnA.style.backgroundColor = '#F6F6F6';
+            btnA.style.color = '#171717';
+        });
+
+        btnA.addEventListener('click', function onClick() {
+            btnA.style.backgroundColor = '#808080';
+            btnA.style.color = 'white';
+            btnT.style.backgroundColor = '#F6F6F6';
+            btnT.style.color = '#171717';
+});
+    </script>
+
+</body>
+</html>
+
+
